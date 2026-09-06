@@ -34,7 +34,7 @@ These settings work on platforms that support builds from Git repositories:
 
 ## Platform notes
 
-- **Vercel:** Import the repository. `vercel.json` supplies the build and output settings.
+- **Vercel:** Import the repository with the Next.js preset. Leave Output Directory blank so Vercel's Next.js adapter can read `.next`; `vercel.json` supplies the build command.
 - **Netlify:** Import the repository. `netlify.toml` supplies the build and publish settings.
 - **Cloudflare Pages:** Use `npm run build` and `out` as the build output directory.
 - **Render / Railway / DigitalOcean:** Choose a static-site deployment and publish `out`.
