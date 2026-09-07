@@ -1,32 +1,46 @@
 import Image from "next/image";
 
 const projects = [
-  { number: "01", title: "Digital products", description: "Thoughtful web experiences shaped around real people and clear business goals.", tags: ["Strategy", "Design", "Build"] },
-  { number: "02", title: "Brand systems", description: "Visual identities and flexible systems that make good ideas easier to recognize.", tags: ["Identity", "Direction", "Systems"] },
-  { number: "03", title: "Creative experiments", description: "Small explorations in technology, storytelling, and the spaces between them.", tags: ["Code", "Ideas", "Play"] },
+  { number: "01", title: "Banking Platform Backend", description: "A secure Spring Boot and MySQL backend supporting authentication, transactions, history, and role-based access.", tags: ["Java", "Spring Boot", "MySQL"] },
+  { number: "02", title: "Yoruba OCR System", description: "A Python OCR system built with OpenCV and Tesseract, achieving more than 85% character-recognition accuracy.", tags: ["Python", "OpenCV", "Tesseract"] },
+  { number: "03", title: "Credit Card Fraud Detection", description: "A machine-learning model for identifying fraudulent card activity, reaching 94% precision on synthetic datasets.", tags: ["Python", "Scikit-learn", "ML"] },
+  { number: "04", title: "Max Music Player", description: "A Python desktop music player with a custom interface and dynamic playlist support.", tags: ["Python", "Desktop", "UI"] },
+];
+
+const experience = [
+  { company: "Remita Payment Services Ltd", role: "Backend Engineer", period: "Jan 2024 — Present", summary: "Building production APIs and microservices for a high-availability fintech environment.", highlights: ["Improved system performance by approximately 30% through API and microservice optimization.", "Reduced partner integration time by 40% with corporate onboarding workflows.", "Built transaction and notification services handling 1,000+ daily operations."] },
+  { company: "Independent Contractor", role: "Freelance Software Engineer", period: "Dec 2022 — Dec 2023", summary: "Delivered secure backend, full-stack, and machine-learning solutions across multiple domains.", highlights: ["Created encrypted backend systems, face-recognition authentication, and Node.js platforms.", "Integrated trained ML models into scalable backend APIs."] },
+  { company: "Pan-African Equipment Group", role: "IT Support & Networking Intern", period: "May 2022 — Nov 2022", summary: "Supported enterprise systems, networks, and high-availability operations.", highlights: ["Improved infrastructure uptime by 15% through network and system troubleshooting."] },
 ];
 
 export default function Home() {
   return <main>
     <nav className="nav shell" aria-label="Main navigation">
       <a className="wordmark" href="#top" aria-label="Johnson Oyebode, home">JO<span>.</span></a>
-      <div className="nav-links"><a href="#work">Work</a><a href="#about">About</a><a className="nav-cta" href="mailto:oyebodej2@gmail.com">Say hello</a></div>
+      <div className="nav-links"><a href="#work">Projects</a><a href="#experience">Experience</a><a href="#about">About</a><a className="nav-cta" href="mailto:oyebodej2@gmail.com">Say hello</a></div>
     </nav>
     <section className="hero shell" id="top">
-      <p className="eyebrow">Independent creative · Lagos, Nigeria</p>
-      <h1>I turn complex ideas into <em>simple, useful</em> experiences.</h1>
-      <div className="hero-bottom"><p>I’m Johnson — a multidisciplinary creator focused on digital products, visual systems, and work that moves people.</p><a className="round-link" href="#work" aria-label="View selected work">↓</a></div>
+      <p className="eyebrow">Backend Engineer · Lagos, Nigeria</p>
+      <h1>I build <em>secure, scalable</em> systems that perform.</h1>
+      <div className="hero-bottom"><div><p>I’m Johnson — a backend engineer specializing in Java, Python, APIs, and production-ready microservices for fintech and beyond.</p><div className="hero-actions"><a className="resume-link" href="/Johnson-Oyebode-CV.pdf" download>Download my CV <span aria-hidden="true">↓</span></a><a href="https://github.com/twincie" target="_blank" rel="noreferrer">View GitHub</a></div></div><a className="round-link" href="#work" aria-label="View selected projects">↓</a></div>
     </section>
     <section className="work shell" id="work">
-      <div className="section-heading"><p className="eyebrow">Selected work</p><p className="aside">A few ways I help ideas take shape.</p></div>
+      <div className="section-heading"><p className="eyebrow">Selected projects</p><p className="aside">Backend engineering, machine learning, and useful software.</p></div>
       <div className="project-list">{projects.map((project) => <article className="project" key={project.number}>
         <span className="project-number">{project.number}</span><div><h2>{project.title}</h2><p>{project.description}</p></div>
-        <ul aria-label={`${project.title} skills`}>{project.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
+        <ul aria-label={`${project.title} technologies`}>{project.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
+      </article>)}</div>
+    </section>
+    <section className="experience shell" id="experience">
+      <div className="section-heading"><p className="eyebrow">Experience</p><p className="aside">From infrastructure support to production fintech systems.</p></div>
+      <div className="experience-list">{experience.map((item) => <article className="experience-item" key={item.company}>
+        <div><p className="period">{item.period}</p><h2>{item.company}</h2><p className="role">{item.role}</p></div>
+        <div><p className="experience-summary">{item.summary}</p><ul>{item.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}</ul></div>
       </article>)}</div>
     </section>
     <section className="about shell" id="about"><div className="about-intro"><p className="eyebrow">A little about me</p><Image className="portrait" src="/johnson-oyebode-hd.jpg" alt="Portrait of Johnson Oyebode" width={150} height={150} /></div><div className="about-copy">
-      <h2>Curious by nature.<br />Intentional by practice.</h2><div><p>I care about the details that make an experience feel effortless — strong ideas, honest communication, and craft that earns its place.</p><p>Whether I’m shaping a product or telling a story, I bring clarity to the process and leave things better than I found them.</p></div>
+      <h2>Clean architecture.<br />Real-world impact.</h2><div><p>I enjoy turning complex requirements into dependable backend systems. My work spans REST APIs, microservices, transaction processing, automation, and applied machine learning.</p><p>My core toolkit includes Java, Spring Boot, Python, Flask, Node.js, PostgreSQL, MySQL, MongoDB, Docker, CI/CD, JWT, and OAuth2.</p><a className="about-resume" href="/Johnson-Oyebode-CV.pdf" download>Download full CV <span aria-hidden="true">↓</span></a></div>
     </div></section>
-    <footer className="shell"><p className="eyebrow">Have something in mind?</p><a className="footer-link" href="mailto:oyebodej2@gmail.com"><span>Start a conversation</span><span className="email-action"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5h18v11H3zM4 7.5l8 6 8-6" /></svg><span>Email me</span></span></a><div className="footer-bottom"><span>© {new Date().getFullYear()} Johnson Oyebode</span></div></footer>
+    <footer className="shell"><p className="eyebrow">Have something in mind?</p><a className="footer-link" href="mailto:oyebodej2@gmail.com"><span>Start a conversation</span><span className="email-action"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5h18v11H3zM4 7.5l8 6 8-6" /></svg><span>Email me</span></span></a><div className="footer-bottom"><span>© {new Date().getFullYear()} Johnson Oyebode</span><span><a href="https://linkedin.com/in/johnson-oyebode-3a9b4b237" target="_blank" rel="noreferrer">LinkedIn</a> · <a href="https://github.com/twincie" target="_blank" rel="noreferrer">GitHub</a></span></div></footer>
   </main>;
 }

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Johnson Oyebode — Creative Portfolio",
-  description: "The portfolio of Johnson Oyebode, a multidisciplinary creator based in Lagos, Nigeria.",
+  title: "Johnson Oyebode — Backend Engineer",
+  description: "Backend engineer specializing in Java, Python, scalable APIs, microservices, and production fintech systems.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
