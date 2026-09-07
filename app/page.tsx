@@ -8,7 +8,7 @@ export default function Home() {
   return <main>
     <nav className="nav shell" aria-label="Main navigation">
       <a className="wordmark" href="#top" aria-label="Johnson Oyebode, home">JO<span>.</span></a>
-      <div className="nav-links"><a href="#work">Work</a><a href="#about">About</a><a className="nav-cta" href="mailto:oyebodej2@gmail.com">Let’s talk ↗</a></div>
+      <div className="nav-links"><a href="#work">Work</a><a href="#about">About</a><a className="nav-cta" href="mailto:oyebodej2@gmail.com">Say hello</a></div>
     </nav>
     <section className="hero shell" id="top">
       <p className="eyebrow">Independent creative · Lagos, Nigeria</p>
@@ -25,6 +25,6 @@ export default function Home() {
     <section className="about shell" id="about"><p className="eyebrow">A little about me</p><div className="about-copy">
       <h2>Curious by nature.<br />Intentional by practice.</h2><div><p>I care about the details that make an experience feel effortless — strong ideas, honest communication, and craft that earns its place.</p><p>Whether I’m shaping a product or telling a story, I bring clarity to the process and leave things better than I found them.</p></div>
     </div></section>
-    <footer className="shell"><p className="eyebrow">Have something in mind?</p><a className="footer-link" href="mailto:oyebodej2@gmail.com">Let’s make it happen <span>↗</span></a><div className="footer-bottom"><span>© {new Date().getFullYear()} Johnson Oyebode</span></div></footer>
+    <footer className="shell"><p className="eyebrow">Have something in mind?</p><a className="footer-link" href="mailto:oyebodej2@gmail.com">Start a conversation</a><div className="footer-bottom"><span>© {new Date().getFullYear()} Johnson Oyebode</span></div></footer>
   </main>;
 }
