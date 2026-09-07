@@ -24,7 +24,7 @@ export default function Home() {
         <ul aria-label={`${project.title} skills`}>{project.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
       </article>)}</div>
     </section>
-    <section className="about shell" id="about"><div className="about-intro"><p className="eyebrow">A little about me</p><Image className="portrait" src="/johnson-oyebode.jpg" alt="Portrait of Johnson Oyebode" width={150} height={150} /></div><div className="about-copy">
+    <section className="about shell" id="about"><div className="about-intro"><p className="eyebrow">A little about me</p><Image className="portrait" src="/johnson-oyebode-hd.jpg" alt="Portrait of Johnson Oyebode" width={150} height={150} /></div><div className="about-copy">
       <h2>Curious by nature.<br />Intentional by practice.</h2><div><p>I care about the details that make an experience feel effortless — strong ideas, honest communication, and craft that earns its place.</p><p>Whether I’m shaping a product or telling a story, I bring clarity to the process and leave things better than I found them.</p></div>
     </div></section>
     <footer className="shell"><p className="eyebrow">Have something in mind?</p><a className="footer-link" href="mailto:oyebodej2@gmail.com">Start a conversation</a><div className="footer-bottom"><span>© {new Date().getFullYear()} Johnson Oyebode</span></div></footer>
