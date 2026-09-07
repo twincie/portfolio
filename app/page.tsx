@@ -2,15 +2,14 @@ import Image from "next/image";
 
 const projects = [
   { number: "01", title: "Banking Platform Backend", description: "A secure Spring Boot and MySQL backend supporting authentication, transactions, history, and role-based access.", tags: ["Java", "Spring Boot", "MySQL"] },
-  { number: "02", title: "Yoruba OCR System", description: "A Python OCR system built with OpenCV and Tesseract, achieving more than 85% character-recognition accuracy.", tags: ["Python", "OpenCV", "Tesseract"] },
-  { number: "03", title: "Credit Card Fraud Detection", description: "A machine-learning model for identifying fraudulent card activity, reaching 94% precision on synthetic datasets.", tags: ["Python", "Scikit-learn", "ML"] },
-  { number: "04", title: "Max Music Player", description: "A Python desktop music player with a custom interface and dynamic playlist support.", tags: ["Python", "Desktop", "UI"] },
+  { number: "02", title: "Comprehensive Fee Service", description: "A backend service for managing and calculating configurable fees across different transaction types.", tags: ["Java", "Spring Boot", "Microservices"] },
+  { number: "03", title: "Max Music Player", description: "A Python desktop music player with a custom interface and dynamic playlist support.", tags: ["Python", "Desktop", "UI"] },
 ];
 
 const experience = [
-  { company: "Remita Payment Services Ltd", role: "Backend Engineer", period: "Jan 2024 — Present", summary: "Building production APIs and microservices for a high-availability fintech environment.", highlights: ["Improved system performance by approximately 30% through API and microservice optimization.", "Reduced partner integration time by 40% with corporate onboarding workflows.", "Built transaction and notification services handling 1,000+ daily operations."] },
-  { company: "Independent Contractor", role: "Freelance Software Engineer", period: "Dec 2022 — Dec 2023", summary: "Delivered secure backend, full-stack, and machine-learning solutions across multiple domains.", highlights: ["Created encrypted backend systems, face-recognition authentication, and Node.js platforms.", "Integrated trained ML models into scalable backend APIs."] },
-  { company: "Pan-African Equipment Group", role: "IT Support & Networking Intern", period: "May 2022 — Nov 2022", summary: "Supported enterprise systems, networks, and high-availability operations.", highlights: ["Improved infrastructure uptime by 15% through network and system troubleshooting."] },
+  { company: "Remita Payment Services Ltd", role: "Backend Engineer", period: "Jan 2024 — Present" },
+  { company: "Independent Contractor", role: "Freelance Software Engineer", period: "Dec 2022 — Dec 2023" },
+  { company: "Pan-African Equipment Group", role: "IT Support & Networking Intern", period: "May 2022 — Nov 2022" },
 ];
 
 export default function Home() {
@@ -32,10 +31,9 @@ export default function Home() {
       </article>)}</div>
     </section>
     <section className="experience shell" id="experience">
-      <div className="section-heading"><p className="eyebrow">Experience</p><p className="aside">From infrastructure support to production fintech systems.</p></div>
+      <div className="section-heading"><p className="eyebrow">Experience</p></div>
       <div className="experience-list">{experience.map((item) => <article className="experience-item" key={item.company}>
-        <div><p className="period">{item.period}</p><h2>{item.company}</h2><p className="role">{item.role}</p></div>
-        <div><p className="experience-summary">{item.summary}</p><ul>{item.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}</ul></div>
+        <div><h2>{item.company}</h2><p className="role">{item.role}</p></div><p className="period">{item.period}</p>
       </article>)}</div>
     </section>
     <section className="about shell" id="about"><div className="about-intro"><p className="eyebrow">A little about me</p><Image className="portrait" src="/johnson-oyebode-hd.jpg" alt="Portrait of Johnson Oyebode" width={150} height={150} /></div><div className="about-copy">
