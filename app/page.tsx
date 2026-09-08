@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ThemeToggle from "./ThemeToggle";
 
 const projects = [
   { number: "01", title: "Banking Platform Backend", description: "A secure Spring Boot and MySQL backend supporting authentication, transactions, history, and role-based access.", tags: ["Java", "Spring Boot", "MySQL"] },
@@ -16,7 +17,7 @@ export default function Home() {
   return <main>
     <nav className="nav shell" aria-label="Main navigation">
       <a className="wordmark" href="#top" aria-label="Johnson Oyebode, home">JO<span>.</span></a>
-      <div className="nav-links"><a href="#work">Projects</a><a href="#experience">Experience</a><a href="#about">About</a><a className="nav-cta" href="mailto:oyebodej2@gmail.com">Say hello</a></div>
+      <div className="nav-actions"><div className="nav-links"><a href="#work">Projects</a><a href="#experience">Experience</a><a href="#about">About</a><a className="nav-cta" href="mailto:oyebodej2@gmail.com">Say hello</a></div><ThemeToggle /></div>
     </nav>
     <section className="hero shell" id="top">
       <p className="eyebrow">Backend Engineer · Lagos, Nigeria</p>
