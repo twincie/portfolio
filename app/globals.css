@@ -31,7 +31,8 @@ a { color: inherit; text-decoration: none; }
 .hero-actions { display: flex; align-items: center; gap: 24px; margin-top: 28px; font-size: 13px; font-weight: 700; }
 .resume-link { display: inline-flex; align-items: center; gap: 12px; background: var(--ink); color: var(--paper); border-radius: 999px; padding: 13px 18px; transition: background .2s, color .2s; }
 .resume-link:hover, .resume-link:focus-visible { background: var(--signal); color: white; }
-.hero-actions > a:last-child { border-bottom: 1px solid var(--ink); padding-bottom: 3px; }
+.profile-link { display: inline-flex; align-items: center; gap: 7px; border-bottom: 1px solid var(--ink); padding-bottom: 3px; transition: color .2s, border-color .2s; }
+.profile-link:hover, .profile-link:focus-visible { color: var(--signal); border-color: var(--signal); }
 .round-link { width: 60px; height: 60px; flex: 0 0 60px; aspect-ratio: 1; display: grid; place-items: center; border: 1px solid var(--ink); border-radius: 50%; font-size: 24px; line-height: 1; transition: .2s; }
 .round-link:hover { transform: translateY(4px); background: var(--signal); border-color: var(--signal); color: white; }
 .work { padding: 110px 0; border-top: 1px solid var(--line); }
