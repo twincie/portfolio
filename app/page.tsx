@@ -13,11 +13,18 @@ const experience = [
   { company: "Pan-African Equipment Group", role: "IT Support & Networking Intern", period: "May 2022 — Nov 2022" },
 ];
 
+const skillGroups = [
+  { label: "Languages", skills: ["Java", "Python", "JavaScript"] },
+  { label: "Backend", skills: ["Spring Boot", "Flask", "Node.js", "Express.js", "REST APIs", "Microservices"] },
+  { label: "Data", skills: ["PostgreSQL", "MySQL", "MongoDB"] },
+  { label: "Delivery & security", skills: ["Docker", "CI/CD", "Git", "Swagger", "JWT", "OAuth2", "Unit Testing"] },
+];
+
 export default function Home() {
   return <main>
     <nav className="nav shell" aria-label="Main navigation">
       <a className="wordmark" href="#top" aria-label="Johnson Oyebode, home">JO<span>.</span></a>
-      <div className="nav-actions"><div className="nav-links"><a href="#work">Projects</a><a href="#experience">Experience</a><a href="#about">About</a><a className="nav-cta" href="mailto:oyebodej2@gmail.com">Say hello</a></div><ThemeToggle /></div>
+      <div className="nav-actions"><div className="nav-links"><a href="#work">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#about">About</a><a className="nav-cta" href="mailto:oyebodej2@gmail.com">Say hello</a></div><ThemeToggle /></div>
     </nav>
     <section className="hero shell" id="top">
       <p className="eyebrow">Backend Engineer · Lagos, Nigeria</p>
@@ -29,6 +36,12 @@ export default function Home() {
       <div className="project-list">{projects.map((project) => <article className="project" key={project.number}>
         <span className="project-number">{project.number}</span><div><h2>{project.title}</h2><p>{project.description}</p></div>
         <ul aria-label={`${project.title} technologies`}>{project.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
+      </article>)}</div>
+    </section>
+    <section className="skills shell" id="skills">
+      <div className="section-heading"><p className="eyebrow">Technical skills</p><p className="aside">Tools I use to build dependable production systems.</p></div>
+      <div className="skills-grid">{skillGroups.map((group) => <article className="skill-group" key={group.label}>
+        <h2>{group.label}</h2><ul>{group.skills.map((skill) => <li key={skill}>{skill}</li>)}</ul>
       </article>)}</div>
     </section>
     <section className="experience shell" id="experience">
