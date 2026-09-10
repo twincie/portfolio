@@ -21,7 +21,7 @@ const skillGroups = [
 ];
 
 export default function Home() {
-  return <main>
+  return <><a className="skip-link" href="#main-content">Skip to main content</a><main id="main-content">
     <nav className="nav shell" aria-label="Main navigation">
       <a className="wordmark" href="#top" aria-label="Johnson Oyebode, home">JO<span>.</span></a>
       <div className="nav-actions"><div className="nav-links"><a href="#work">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#about">About</a><a className="nav-cta" href="mailto:oyebodej2@gmail.com">Say hello</a></div><ThemeToggle /></div>
@@ -61,5 +61,5 @@ export default function Home() {
       <h2>Clean architecture.<br />Real-world impact.</h2><div><p>I enjoy turning complex requirements into dependable backend systems. My work spans REST APIs, microservices, transaction processing, automation, and applied machine learning.</p><p>My core toolkit includes Java, Spring Boot, Python, Flask, Node.js, PostgreSQL, MySQL, MongoDB, Docker, CI/CD, JWT, and OAuth2.</p><a className="about-resume" href="/Johnson-Oyebode-CV.pdf" download>Download full CV <span aria-hidden="true">↓</span></a></div>
     </div></section>
     <footer className="shell"><p className="eyebrow">Have something in mind?</p><a className="footer-link" href="mailto:oyebodej2@gmail.com"><span>Start a conversation</span><span className="email-action"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5h18v11H3zM4 7.5l8 6 8-6" /></svg><span>Email me</span></span></a><div className="footer-bottom"><span>© {new Date().getFullYear()} Johnson Oyebode</span><span><a href="https://linkedin.com/in/johnson-oyebode-3a9b4b237" target="_blank" rel="noreferrer">LinkedIn</a> · <a href="https://github.com/twincie" target="_blank" rel="noreferrer">GitHub</a></span></div></footer>
-  </main>;
+  </main></>;
 }
