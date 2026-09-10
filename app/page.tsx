@@ -50,6 +50,13 @@ export default function Home() {
         <div><h2>{item.company}</h2><p className="role">{item.role}</p></div><p className="period">{item.period}</p>
       </article>)}</div>
     </section>
+    <section className="credentials shell" aria-labelledby="credentials-title">
+      <div className="credentials-heading"><p className="eyebrow" id="credentials-title">Education & certifications</p></div>
+      <div className="credentials-grid">
+        <article className="education-card"><p className="credential-label">Education</p><h2>B.Sc. Computer Science</h2><p>Redeemer’s University</p><span>2018 — 2023</span></article>
+        <article className="certifications-card"><p className="credential-label">Certifications</p><ul><li><span>Java Backend Developer</span><small>Udemy</small></li><li><span>REST API Development</span><small>Postman Academy</small></li><li><span>Spring Boot Microservices</span><small>Coursera</small></li></ul></article>
+      </div>
+    </section>
     <section className="about shell" id="about"><div className="about-intro"><p className="eyebrow">A little about me</p><Image className="portrait" src="/johnson-oyebode-hd.jpg" alt="Portrait of Johnson Oyebode" width={150} height={150} /></div><div className="about-copy">
       <h2>Clean architecture.<br />Real-world impact.</h2><div><p>I enjoy turning complex requirements into dependable backend systems. My work spans REST APIs, microservices, transaction processing, automation, and applied machine learning.</p><p>My core toolkit includes Java, Spring Boot, Python, Flask, Node.js, PostgreSQL, MySQL, MongoDB, Docker, CI/CD, JWT, and OAuth2.</p><a className="about-resume" href="/Johnson-Oyebode-CV.pdf" download>Download full CV <span aria-hidden="true">↓</span></a></div>
     </div></section>
