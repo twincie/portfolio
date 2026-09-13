@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
-  ?? (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "https://johnson-oyebode-portfolio.oyebodej2.chatgpt.site");
+import { siteUrl } from "./site";
 
 const personJsonLd = {
   "@context": "https://schema.org",
